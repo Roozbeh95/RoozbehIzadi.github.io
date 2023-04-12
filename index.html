@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>My GitHub Page</title>
+	<style>
+		/* Styles for the tabs */
+		.tab {
+			display: none;
+		}
+
+		/* Style for the active tab */
+		.tab.active {
+			display: block;
+		}
+	</style>
+</head>
+<body>
+	<div class="tab-buttons">
+		<button onclick="openTab('about')">About</button>
+		<button onclick="openTab('resume')">Resume</button>
+		<button onclick="openTab('contact')">Contact Me</button>
+	</div>
+
+	<div class="tab-content">
+		<div class="tab active" id="about">
+			<h2>About</h2>
+			<p>This is my GitHub page.</p>
+		</div>
+
+		<div class="tab" id="resume">
+			<h2>Resume</h2>
+			<p>Here is my resume.</p>
+		</div>
+
+		<div class="tab" id="contact">
+			<h2>Contact Me</h2>
+			<p>Here is my contact information.</p>
+		</div>
+	</div>
+
+	<script>
+		function openTab(tabName) {
+			// Hide all tabs
+			var tabs = document.getElementsByClassName("tab");
+			for (var i = 0; i < tabs.length; i++) {
+				tabs[i].classList.remove("active");
+			}
+
+			// Show the selected tab
+			document.getElementById(tabName).classList.add("active");
+		}
+	</script>
+</body>
+</html>
